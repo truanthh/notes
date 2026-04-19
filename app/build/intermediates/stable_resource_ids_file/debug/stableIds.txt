@@ -1,0 +1,11 @@
+com.simple.notes:string/hint_new_note = 0x7f030003
+com.simple.notes:layout/item_note = 0x7f020001
+com.simple.notes:layout/activity_main = 0x7f020000
+com.simple.notes:string/add = 0x7f030000
+com.simple.notes:id/noteText = 0x7f010003
+com.simple.notes:id/notesList = 0x7f010004
+com.simple.notes:id/noteInput = 0x7f010002
+com.simple.notes:string/delete = 0x7f030002
+com.simple.notes:string/app_name = 0x7f030001
+com.simple.notes:id/deleteButton = 0x7f010001
+com.simple.notes:id/addButton = 0x7f010000

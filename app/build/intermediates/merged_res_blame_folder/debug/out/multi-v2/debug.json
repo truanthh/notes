@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.simple.notes.app-merged_res-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Alina\\Desktop\\bla\\notes-app\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,2,5,3",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "163,57,205,103",
+                        "endColumns": "40,44,42,58",
+                        "endOffsets": "199,97,243,157"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,96,141,184",
+                        "endColumns": "40,44,42,58",
+                        "endOffsets": "91,136,179,238"
+                    }
+                }
+            ]
+        }
+    ]
+}

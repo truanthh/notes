@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="hint_new_note">Новая заметка...</string>
+    <string name="add">Добавить</string>
+    <string name="delete">Удалить</string>
+</resources>
