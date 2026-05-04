@@ -1,13 +1,14 @@
 R_DEF: Internal format may change without notice
 local
-id addButton
-id deleteButton
-id noteInput
-id noteText
-id notesList
-layout activity_main
-layout item_note
-string add
+id btn_delete
+id btn_list
+id checkbox
+id editor
+id list
+id text
+layout item
+layout list
+layout main
+string all_notes
 string app_name
-string delete
-string hint_new_note
+string hint

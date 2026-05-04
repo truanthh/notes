@@ -1,10 +1,14 @@
 [
     {
-        "merged": "com.simple.notes.app-merged_res-4:/layout_item_note.xml.flat",
-        "source": "com.simple.notes.app-main-6:/layout/item_note.xml"
+        "merged": "com.simple.notes.app-merged_res-4:/layout_list.xml.flat",
+        "source": "com.simple.notes.app-main-6:/layout/list.xml"
     },
     {
-        "merged": "com.simple.notes.app-merged_res-4:/layout_activity_main.xml.flat",
-        "source": "com.simple.notes.app-main-6:/layout/activity_main.xml"
+        "merged": "com.simple.notes.app-merged_res-4:/layout_item.xml.flat",
+        "source": "com.simple.notes.app-main-6:/layout/item.xml"
+    },
+    {
+        "merged": "com.simple.notes.app-merged_res-4:/layout_main.xml.flat",
+        "source": "com.simple.notes.app-main-6:/layout/main.xml"
     }
 ]
