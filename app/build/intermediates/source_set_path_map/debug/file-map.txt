@@ -1,7 +1,0 @@
-com.simple.notes.app-pngs-0 D:\ildar\notes\app\build\generated\res\pngs\debug
-com.simple.notes.app-resValues-1 D:\ildar\notes\app\build\generated\res\resValues\debug
-com.simple.notes.app-packageDebugResources-2 D:\ildar\notes\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.simple.notes.app-packageDebugResources-3 D:\ildar\notes\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.simple.notes.app-merged_res-4 D:\ildar\notes\app\build\intermediates\merged_res\debug
-com.simple.notes.app-debug-5 D:\ildar\notes\app\src\debug\res
-com.simple.notes.app-main-6 D:\ildar\notes\app\src\main\res

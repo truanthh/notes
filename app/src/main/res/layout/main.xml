@@ -10,6 +10,18 @@
         android:layout_height="wrap_content"
         android:text="@string/all_notes" />
 
+    <TextView
+        android:id="@+id/note_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:visibility="gone" />
+
     <EditText
         android:id="@+id/editor"
         android:layout_width="match_parent"

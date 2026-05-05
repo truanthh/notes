@@ -1,1 +1,22 @@
+# Gradle files
+.gradle/
+build/
 app/build/
+*/build/
+
+# Local configuration file (системные настройки)
+local.properties
+
+# Log/OS files
+*.log
+*.iml
+.idea/
+.DS_Store
+
+# Android Studio
+captures/
+.externalNativeBuild/
+
+# Keystore files (важно для безопасности!)
+*.jks
+*.keystore
