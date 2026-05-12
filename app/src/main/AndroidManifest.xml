@@ -6,8 +6,7 @@
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
         <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="stateVisible"
+            android:name=".LauncherActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,7 +14,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateVisible" />
+
         <activity android:name=".ListActivity" />
+
+        <activity android:name=".SettingsActivity" />
 
     </application>
 

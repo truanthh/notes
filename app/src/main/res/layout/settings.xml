@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="4dp"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Настройки"
+            android:textSize="16sp"
+            android:textColor="#333333" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Стартовый экран"
+        android:textSize="14sp"
+        android:textColor="#888888" />
+
+    <RadioGroup
+        android:id="@+id/rg_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_start_editor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Новая заметка" />
+
+        <RadioButton
+            android:id="@+id/rb_start_list"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Список заметок" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Кнопка «Назад» в новой заметке"
+        android:textSize="14sp"
+        android:textColor="#888888" />
+
+    <RadioGroup
+        android:id="@+id/rg_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_back_exit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Выйти из приложения" />
+
+        <RadioButton
+            android:id="@+id/rb_back_list"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Открыть список заметок" />
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -4,14 +4,16 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.Toast
 
 class ListActivity : Activity() {
 
     private lateinit var listView: ListView
+    private lateinit var btnDelete: Button
     private lateinit var notes: MutableList<Note>
     private val selected = mutableSetOf<Long>()
     private lateinit var adapter: Adapter
@@ -22,6 +24,18 @@ class ListActivity : Activity() {
         setContentView(R.layout.list)
 
         listView = findViewById(R.id.list)
+        btnDelete = findViewById(R.id.btn_delete)
+
+        btnDelete.setOnClickListener { confirmDelete() }
+
+        findViewById<ImageButton>(R.id.btn_new).setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        findViewById<ImageButton>(R.id.btn_settings).setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
+
         loadNotes()
 
         listView.setOnItemClickListener { _, _, pos, _ ->
@@ -33,6 +47,7 @@ class ListActivity : Activity() {
                     putExtra("note_id", note.id)
                     putExtra("note_text", note.text)
                     putExtra("note_timestamp", note.timestamp)
+                    putExtra("from_list", true)
                 }
                 startActivity(intent)
             }
@@ -47,6 +62,8 @@ class ListActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
+        // Выходим из режима выбора при возврате
+        if (selectMode) exitSelectMode()
         loadNotes()
     }
 
@@ -59,7 +76,7 @@ class ListActivity : Activity() {
     private fun enterSelectMode() {
         selectMode = true
         adapter.setSelectMode(true)
-        invalidateOptionsMenu()
+        btnDelete.visibility = View.VISIBLE
         adapter.notifyDataSetChanged()
     }
 
@@ -67,7 +84,7 @@ class ListActivity : Activity() {
         selectMode = false
         selected.clear()
         adapter.setSelectMode(false)
-        invalidateOptionsMenu()
+        btnDelete.visibility = View.GONE
         adapter.notifyDataSetChanged()
     }
 
@@ -75,20 +92,6 @@ class ListActivity : Activity() {
         val id = notes[pos].id
         if (id in selected) selected.remove(id) else selected.add(id)
         adapter.notifyDataSetChanged()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        if (selectMode) {
-            menu.add(0, 1, 0, "🗑").apply {
-                setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-            }
-        }
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == 1) confirmDelete()
-        return true
     }
 
     private fun confirmDelete() {
@@ -104,7 +107,8 @@ class ListActivity : Activity() {
             .setPositiveButton("Ок") { _, _ ->
                 notes.removeAll { it.id in selected }
                 Storage.save(this, notes)
-                if (notes.isEmpty()) Toast.makeText(this, "Все заметки удалены", Toast.LENGTH_SHORT).show()
+                if (notes.isEmpty())
+                    Toast.makeText(this, "Все заметки удалены", Toast.LENGTH_SHORT).show()
                 exitSelectMode()
                 loadNotes()
             }
@@ -112,8 +116,9 @@ class ListActivity : Activity() {
             .show()
     }
 
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         if (selectMode) exitSelectMode()
-        else super.onBackPressed()
+        else finishAffinity()
     }
 }
